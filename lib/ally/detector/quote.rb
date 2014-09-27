@@ -34,7 +34,6 @@ module Ally
         end
         @datapoints.length == 0 ? nil : @datapoints
       end
-    
     end
   end
 end

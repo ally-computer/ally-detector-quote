@@ -16,12 +16,12 @@ describe Ally::Detector::Quote do
 
     it 'when there no quote' do
       subject.inquiry('that is charlie\'s coat.')
-        .detect.should == nil
+        .detect.should.nil?
     end
 
     it 'when there are two no quotes' do
       subject.inquiry('that\'s is charlie\'s coat.')
-        .detect.should == nil
+        .detect.should.nil?
     end
 
     it 'when using single quotes' do
@@ -31,7 +31,7 @@ describe Ally::Detector::Quote do
 
     it 'when theres an apostrophe at the end of a word' do
       subject.inquiry('we should go to Changs\' house')
-        .detect.should == nil
+        .detect.should.nil?
     end
 
     # this one may not have a feasible means of working
@@ -40,5 +40,5 @@ describe Ally::Detector::Quote do
     #    .detect.should == ['head to chang\'s house']
     # end
   end
-  
+
 end
